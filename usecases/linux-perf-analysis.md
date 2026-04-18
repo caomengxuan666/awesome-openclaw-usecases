@@ -20,20 +20,18 @@ What to use it for:
 git clone https://github.com/caomengxuan666/perf-skills.git .claude/skills/linux-perf
 ```
 
-2. Alternatively, download the skill file directly:
+2. Alternatively, use Vercel skills CLI (recommended):
 ```bash
-curl -O https://raw.githubusercontent.com/caomengxuan666/perf-skills/main/.claude/skills/linux-perf/SKILL.md
-mkdir -p .claude/skills/linux-perf
-mv SKILL.md .claude/skills/linux-perf/
+npx -y skills add https://github.com/caomengxuan666/perf-skills --global --yes
 ```
 
-4. Or use with Claude Code:
+3. Or use with Claude Code:
 ```bash
 /plugin marketplace add caomengxuan666/perf-skills
 /plugin install linux-perf@caomengxuan666/perf-skills
 ```
 
-3. Then prompt your agent:
+4. Then prompt your agent:
 ```text
 Help me profile my application with perf. My app is running slowly.
 ```
